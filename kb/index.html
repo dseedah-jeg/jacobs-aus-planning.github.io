@@ -16,8 +16,6 @@
       type="text/css"
       href="assets/css/bootstrap.min.css"
     />
-    <!-- Slicknav -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css" />
     <!-- Animate -->
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
     <!-- Main Style -->
@@ -31,46 +29,28 @@
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
         <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#main-navbar"
-              aria-controls="main-navbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-              <span class="icon-menu"></span>
-              <span class="icon-menu"></span>
-              <span class="icon-menu"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto w-100 justify-content-left clearfix">
-              <li class="nav-item active">
-                Welcome to the Jacobs Interactive Knowledge Base App
-              </li>
-            </ul>
-            <div class="btn-sing float-right">
-              <a href="index.html" class="navbar-brand"
-                ><img src="assets/img/logo.png" alt=""
-              /></a>
+            <a href="index.html" class="navbar-brand"
+              ><img src="assets/img/logo.png" alt=""
+            /></a>
+            <div class="dropdown" style="float:right;">
+              <button class="dropbtn">
+                <img src="./assets/img/home.png" class="pia-chat-ico" />
+              </button>
+              <div class="dropdown-content">
+                <a
+                  class="nav-link"
+                  href="https://www.txdot.gov/inside-txdot/projects/studies/laredo/laredo-outer-loop-feasibility-study.html"
+                >
+                  Project Page
+                </a>
+                <a class="nav-link" href="https://laredoloop.metroquest.com/">
+                  Take the Survey
+                </a>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Mobile Menu Start -->
-        <ul class="mobile-menu navbar-nav">
-          <li>
-            <a class="page-scroll" href="#hero-area">
-              &nbsp;
-            </a>
-          </li>
-        </ul>
-        <!-- Mobile Menu End -->
       </nav>
       <!-- Navbar End -->
 
@@ -91,21 +71,55 @@
               >
                 <div class="card">
                   <div class="card-header text-white bg-primary mb-3">
-                    <img
-                      src="./assets/img/jacobs_sm_logo.png"
-                      class="small-logo"
-                    />
-                    Interactive Knowledge Base
+                    <h2>
+                      Ask PIA
+                      <span
+                        ><img src="./assets/img/chat.png" class="pia-chat-ico" style="height:30px"
+                      /></span>
+                      <div class="info-dropdown" style="float:right;">
+                        <button class="info-dropbtn">
+                            i
+                        </button>
+                        <div class="dropdown-content">
+                          <a
+                            class="nav-link"
+                            href="#"
+                          >
+                            Placeholder for FAQs
+                          </a>
+                         
+                        </div>
+                      </div>
+                      
+                    </h2>
+                   
                   </div>
                   <div class="card-body">
-                    <iframe
+                    <div id="webchat" role="main"></div>
+
+                    <!--<iframe
                       frameborder="0"
                       src="https://webchat.botframework.com/embed/laredoouterloop-bot?s=DZagxFvxGVc.PHC2Xn1MLshss_V1leXESViUBHOE8yXgmsHk3_SCuNk"
-                    ></iframe>
+                    ></iframe>-->
+                    <div>
+                      <span class="footer"
+                        >
+                    </div>
                   </div>
+                  <section id="copyright">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">   
+                          <img
+                            src="./assets/img/jacobs_sm_logo.png"
+                            class="jlogo"
+                          />                     
+                          <p>Powered by Jacobs Interactive Knowledge Base. Copyright © 2020 All Right Reserved</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
                 </div>
-                <!-- 
-                <div id="webchat" role="main"></div> 
                 <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
                 <script>
                   window.WebChat.renderWebChat(
@@ -122,7 +136,7 @@
                     },
                     document.getElementById("webchat")
                   );
-                </script>-->
+                </script>
               </div>
             </div>
           </div>
