@@ -72,7 +72,8 @@
       });
     }
     $(".auto_add").click(function(e) {
-      $('[data-id="webchat-sendbox-input"]').val(this.text);
+      var text = this.text;
+      $('[data-id="webchat-sendbox-input"]').sendkeys(text);
       $('[title="Send"]').trigger("click");
     });
   });

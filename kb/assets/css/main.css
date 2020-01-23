@@ -2998,7 +2998,7 @@
 		right: 0;
 		top: 0;
 		visibility: hidden;
-		width: 20em;
+		width: 25em;
 		z-index: 10002;
 	}
 
@@ -3136,8 +3136,8 @@
 /* Main */
 
 img.logo {
-	max-width: 3.5rem;
-	margin-top: 0.5rem;
+	max-width: 3em;
+	margin-top: 0.25em;
 }
 
 .card {
@@ -3192,7 +3192,9 @@ img.logo {
 	  #webchat .main [title="Send"] svg {
 		width:3rem
 	  }
-
+	  .css-cf1ppa:not(.from-user), [data-css-cf1ppa]:not(.from-user) {
+		background-color: rgb(224, 113, 42) !important;
+	}
 	  
 	  .dropbtn {
 		/* background-color: #001f50; */
