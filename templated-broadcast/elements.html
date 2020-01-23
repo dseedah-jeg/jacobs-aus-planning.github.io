@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+	Broadcast by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+  <head>
+    <title>PIA - Laredo Outer Loop Feasibility Study</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="subpage">
+    <!-- Header -->
+    <header id="header">
+      <h1>
+        <a href="#"> <img src="images/logo.png" class="logo"/></a>
+      </h1>
+      <a href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.html" target="_blank">Project Page</a></li>
+        <li><a href="generic.html" target="_blank">Online Survey</a></li>
+      </ul>
+    </nav>
+
+    <!-- Nav -->
+    <nav id="infopage">
+      <div class="schedule_tabs">
+        <input type="radio" name="rb" id="rb1" />
+        <label for="rb1"><i class="fas fa-check"></i>English</label>
+        <input type="radio" name="rb" id="rb2" />
+        <label for="rb2"><i class="fas fa-check"></i>Spanish</label>
+      </div>
+      PIA is short for Public Information Assistant. PIA is here to answer any
+      question you might have about this project. So go ahead and ask! You can
+      ask things like: Why is this project being built? How much will it cost?
+      Is there a public meeting coming up? Who can I speak to for more
+      information? PIA is an automated information service provided by the Texas
+      Department of Transportation to make project information accessible to you
+      24/7. If it is unable to answer your questions, it direct you to the
+      document or TxDOT employee that can better address your needs. Greeting in
+      Spanish: Hola, tienes alguna pregunta? Information tab in Spanish PIA es
+      la abreviación para Asistente para Información Pública (por sus siglas en
+      ingles). PIA esta aquí para responder cualquier pregunta que puedas tener
+      acerca de este proyecto. Así que adelante y pregunta! Puedes preguntar
+      cosas como: ¿Por qué se está construyendo este proyecto? ¿Cuánto va a
+      costar? ¿Habrá alguna reunión pública pronto? ¿Con quién puedo hablar para
+      obtener más información? PIA es un sistema automatizado de información
+      proporcionado por el Departamento de Transporte de Texas para hacer
+      información sobre este proyecto accesible para ti las 24 hrs. del día. Si
+      no logra contestar tus preguntas, el sistema te dirigirá hacia el
+      documento o el empleado de TxDOT más adecuado para responder a tus
+      necesidades.
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+      <section class="wrapper style1">
+        <div class="inner">
+          <h2>Laredo Outer Loop Feasibility Study</h2>
+          <div class="card">
+            <div class="card-header">
+              <span style="float:left; margin-left:1.5rem">
+                PIA
+                <img src="./images/chat.png" class="pia-chat-ico" />
+              </span>
+              <a class="dropbtn" href="#infopage" style="float:right;">
+                <i class="fa fa-info"></i>
+              </a>
+            </div>
+            <div class="card-main">
+              <div id="webchat" role="main"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="copyright">
+        <ul class="icons">
+          <li>
+            <img src="images/jacobs_sm_logo.png" style="width:2rem" />
+          </li>
+        </ul>
+        &copy; Powered by the Jacobs Interactive Knowledge Base. <br />Copyright
+        © 2020 All Right Reserved.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <script>
+      window.WebChat.renderWebChat(
+        {
+          directLine: window.WebChat.createDirectLine({
+            token: "DZagxFvxGVc.PHC2Xn1MLshss_V1leXESViUBHOE8yXgmsHk3_SCuNk"
+          }),
+          userID: "YOUR_USER_ID",
+          username: "Web Chat User",
+          locale: "en-US",
+          botAvatarInitials: "WC",
+          userAvatarInitials: "WW"
+        },
+        document.getElementById("webchat")
+      );
+    </script>
+  </body>
+</html>

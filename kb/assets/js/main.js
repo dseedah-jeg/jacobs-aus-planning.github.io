@@ -1,101 +1,79 @@
+/*
+	Broadcast by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
 (function($) {
-  "use strict";
+  skel.breakpoints({
+    xlarge: "(max-width: 1680px)",
+    large: "(max-width: 1280px)",
+    medium: "(max-width: 980px)",
+    small: "(max-width: 736px)",
+    xsmall: "(max-width: 480px)"
+  });
 
-  $(window).on("load", function() {
-    /*Page Loader active
-  ========================================================*/
-    $("#preloader").fadeOut();
+  $(function() {
+    var $window = $(window),
+      $body = $("body");
 
-    // Sticky Nav
-    $(window).on("scroll", function() {
-      if ($(window).scrollTop() > 50) {
-        $(".scrolling-navbar").addClass("top-nav-collapse");
-      } else {
-        $(".scrolling-navbar").removeClass("top-nav-collapse");
-      }
+    // Disable animations/transitions until the page has loaded.
+    $body.addClass("is-loading");
+
+    $window.on("load", function() {
+      window.setTimeout(function() {
+        $body.removeClass("is-loading");
+      }, 100);
     });
 
-    // one page navigation
-    $(".navbar-nav").onePageNav({
-      currentClass: "active"
-    });
+    // Fix: Placeholder polyfill.
+    $("form").placeholder();
 
-    /* slicknav mobile menu active  */
-    $(".mobile-menu").slicknav({
-      prependTo: ".navbar-header",
-      parentTag: "liner",
-      allowParentLinks: true,
-      duplicate: true,
-      label: "",
-      closedSymbol: '<i class="lni-chevron-right"></i>',
-      openedSymbol: '<i class="lni-chevron-down"></i>'
-    });
-
-    /* WOW Scroll Spy
-    ========================================================*/
-    var wow = new WOW({
-      //disabled for mobile
-      mobile: false
-    });
-
-    wow.init();
-
-    /*  Slick Slider
-    ========================================================*/
-    $(".slider-center").slick({
-      centerMode: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: "40px",
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: "40px",
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-
-    /* Back Top Link active
-    ========================================================*/
-    var offset = 200;
-    var duration = 500;
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > offset) {
-        $(".back-to-top").fadeIn(400);
-      } else {
-        $(".back-to-top").fadeOut(400);
-      }
-    });
-
-    $(".back-to-top").on("click", function(event) {
-      event.preventDefault();
-      $("html, body").animate(
-        {
-          scrollTop: 0
-        },
-        600
+    // Prioritize "important" elements on medium.
+    skel.on("+medium -medium", function() {
+      $.prioritize(
+        ".important\\28 medium\\29",
+        skel.breakpoint("medium").active
       );
-      return false;
     });
 
-    /* Map Form Toggle
-      ========================================================*/
-    $(".map-icon").on("click", function(e) {
-      $("#conatiner-map").toggleClass("panel-show");
-      e.preventDefault();
+    // Menu.
+    $("#menu")
+      .append('<a href="#menu" class="close"></a>')
+      .appendTo($body)
+      .panel({
+        delay: 500,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        resetForms: true,
+        side: "right"
+      });
+
+    // Info Page.
+    $("#infopage")
+      .append('<a href="#infopage" class="close"></a>')
+      .appendTo($body)
+      .panel({
+        delay: 500,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        resetForms: true,
+        side: "right"
+      });
+
+    // Scrolly.
+    if ($(".scrolly").length) {
+      var $height = $("#header").height();
+
+      $(".scrolly").scrolly({
+        offset: $height
+      });
+    }
+    $(".auto_add").click(function(e) {
+      $('[data-id="webchat-sendbox-input"]').val(this.text);
+      $('[title="Send"]').trigger("click");
     });
   });
 })(jQuery);
