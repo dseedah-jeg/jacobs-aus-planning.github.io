@@ -1791,7 +1791,7 @@
 	}
 
 	a {
-		color: #c1c7cd;
+		color: #0000FF;
 	}
 
 		a:hover {
@@ -1799,7 +1799,7 @@
 		}
 
 	strong, b {
-		color: #ffffff;
+		/* color: #ffffff; */
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2846,7 +2846,7 @@
 		padding-top: 3.125em;
 	}
 
-	#header {
+	#header, .card-header {
 		background: #001f50;
 		color: #c0c5c9;
 		cursor: default;
@@ -2952,7 +2952,7 @@
 			padding-top: 44px;
 		}
 
-		#header {
+		#header,  .card-header {
 			height: 44px;
 			line-height: 44px;
 		}
@@ -3151,14 +3151,14 @@ img.logo {
 	}
   
   .card-header {
-	color: #fff;
-	text-align: center;
-	font-size: 2rem;
-	font-weight: 600;
-	border-bottom: 1px solid #EF9A9A;
-	background-color: #e0712a;
-	padding: 5px 10px;
-	}
+	  position: relative;
+	  color: #fff;
+	  text-align: center;
+	  /* font-size: 2rem; */
+	  font-weight: 600;
+	  border-bottom: 1px solid #EF9A9A;
+	  background-color: #e0712a;
+}
   
   .card-main {
 	display: block;              /* Children use Flexbox */
@@ -3196,20 +3196,16 @@ img.logo {
 		background-color: rgb(224, 113, 42) !important;
 	}
 	  
-	  .dropbtn {
-		/* background-color: #001f50; */
+	  .infolink {
 		color: white;
-		/* padding: 16px; */
-		/* padding-right: 1rem; */
 		font-size: 2rem;
 		border: none;
-		cursor: pointer;
-		border: 2px solid #fff;
-		text-align: center;
-		border-radius: 50%;
-		/* padding: 0.5rem; */
+		cursor: pointer;				
 		width: 3rem;
 		height: 3rem;
+		display: inline-block;
+		position: absolute;
+		right:1rem;
 		}
 	  
 	  .dropdown {
